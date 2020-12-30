@@ -13,7 +13,8 @@
         android:text="Take Picture"
         android:textSize="36sp"
         android:translationY="500sp"
-        app:backgroundTint="#F4AFB4" />
+        app:backgroundTint="#F4AFB4"
+        />
 
     <TextView
         android:id="@+id/textView4"
