@@ -10,11 +10,10 @@
         android:id="@+id/button4"
         android:layout_width="match_parent"
         android:layout_height="155dp"
-        android:text="Take Picture"
+        android:text="Choose Picture"
         android:textSize="36sp"
         android:translationY="500sp"
-        app:backgroundTint="#F4AFB4"
-        />
+        app:backgroundTint="#F4AFB4" />
 
     <TextView
         android:id="@+id/textView4"
