@@ -35,14 +35,8 @@ public class MainActivity<Create> extends AppCompatActivity {
 
     private void openCamera () {
 
-        // request camera permissions if permissions are not already accepted
-        if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CAMERA)
-                != PackageManager.PERMISSION_GRANTED) {
-            // dialog to request permissions
-            ActivityCompat.requestPermissions(MainActivity.this, new String[] {Manifest.permission.CAMERA}, CAMERA_REQUEST);
-        }
         // request read permissions so that we can take image from gallery
-        else if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_EXTERNAL_STORAGE)
+        if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(MainActivity.this, new String[] {Manifest.permission.READ_EXTERNAL_STORAGE}, READ_REQUEST);
         }
@@ -52,7 +46,6 @@ public class MainActivity<Create> extends AppCompatActivity {
             ActivityCompat.requestPermissions(MainActivity.this, new String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE}, WRITE_REQUEST);
         }
         else {
-
 
             //Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
             Intent imgIntent = new Intent(Intent.ACTION_PICK, // open gallery intent
