@@ -90,7 +90,7 @@ public class MainActivity<Create> extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
         super.onActivityResult(requestCode, resultCode, data);
-        Toast.makeText(getApplicationContext(),"start fam",Toast.LENGTH_SHORT).show();
+
         if (resultCode == Activity.RESULT_OK)
         {
 

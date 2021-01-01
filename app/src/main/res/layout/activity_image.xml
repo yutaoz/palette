@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/imageLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#27213C"
+    android:layout_gravity="center"
     tools:context=".ImageActivity">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="457dp"
-        android:translationY="100sp"
-        tools:srcCompat="@tools:sample/avatars" />
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:maxHeight="450sp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter" />
+
+</LinearLayout>
