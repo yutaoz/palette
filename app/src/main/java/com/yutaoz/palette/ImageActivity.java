@@ -14,12 +14,15 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.ImageView;
+import android.widget.TextView;
+
 import java.io.FileNotFoundException;
 
 public class ImageActivity extends AppCompatActivity {
     ImageView imageView;
     Bitmap photo = null;
     ConstraintLayout imageLayout;
+    TextView colorCode;
 
 
     @Override
@@ -32,6 +35,7 @@ public class ImageActivity extends AppCompatActivity {
         imageLayout = this.findViewById(R.id.imageLayout);
 
         Uri targetUri = intent.getParcelableExtra("image");
+        colorCode = (TextView)findViewById(R.id.ccode);
 
         try {
             photo = BitmapFactory.decodeStream(getContentResolver().openInputStream(targetUri));
@@ -74,6 +78,7 @@ public class ImageActivity extends AppCompatActivity {
                     // set both background color and imageview if leftover
                     imageLayout.setBackgroundColor(Color.parseColor(hex));
                     imageView.setBackgroundColor(Color.parseColor(hex));
+                    colorCode.setText(hex);
 
 
                     break;
