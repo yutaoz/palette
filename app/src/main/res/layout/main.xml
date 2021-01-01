@@ -12,7 +12,7 @@
         android:layout_height="155dp"
         android:text="Choose Picture"
         android:textSize="36sp"
-        android:translationY="500sp"
+        android:translationY="450sp"
         app:backgroundTint="#F4AFB4" />
 
     <TextView
